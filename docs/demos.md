@@ -4,10 +4,9 @@ description: Short screen recordings of Spawnly on a live cluster — an agent w
 ---
 
 Two short clips of Spawnly running on a live cluster. Want to run them yourself?
-Install the
-[Claude Code plugin](https://github.com/dbfr3qs/Spawnly/blob/main/PLUGIN.md) and
-run `/spawnly:up` then `/spawnly:demo` — Claude brings the platform up and
-narrates the same scenarios on your own machine.
+Install the Claude Code plugin and run `/spawnly:up` then `/spawnly:demo` —
+Claude brings the platform up and narrates the same scenarios on your own
+machine.
 
 ## An agent, working end to end
 
@@ -54,6 +53,5 @@ sub-agents, and you see two things that make agent delegation safe:
   <figcaption>A child waits for consent; once approved the chain grows; then revoking a node cascades <code>work_denied</code> through its subtree while ancestors keep serving <code>work_ok</code>.</figcaption>
 </figure>
 
-Go deeper: [CIBA spawn consent](/internals/spawn-consent) and
-[Defining Policy](/authoring/05-defining-policy) (how the revoked relations are
-derived).
+Go deeper: [Defining Policy](/authoring/05-defining-policy) (how the revoked
+relations are derived).

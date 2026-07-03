@@ -24,13 +24,6 @@ export default defineConfig({
         './src/styles/demos.css',
         './src/styles/landing.css',
       ],
-      social: [
-        {
-          icon: 'github',
-          label: 'GitHub',
-          href: 'https://github.com/dbfr3qs/Spawnly',
-        },
-      ],
       sidebar: [
         { slug: 'demos', label: 'See it in action' },
         {
@@ -47,14 +40,6 @@ export default defineConfig({
             { slug: 'authoring/04-defining-a-template', label: 'Defining a Template' },
             { slug: 'authoring/05-defining-policy', label: 'Defining Policy' },
             { slug: 'authoring/06-chat', label: 'Chatting with an Agent' },
-          ],
-        },
-        {
-          label: 'Under the hood',
-          items: [
-            { slug: 'internals/token-minting', label: 'How a token is minted' },
-            { slug: 'internals/spawn-consent', label: 'CIBA spawn consent' },
-            { slug: 'internals/mobile-ciba', label: 'Mobile CIBA consent' },
           ],
         },
         {

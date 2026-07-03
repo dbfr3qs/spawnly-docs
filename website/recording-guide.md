@@ -93,7 +93,7 @@ screen capture of the terminal (or asciinema if you prefer text-selectable). The
 others are browser/dashboard captures.
 
 **Shot list:**
-1. **(0–10s)** `/plugin marketplace add dbfr3qs/Spawnly` then
+1. **(0–10s)** `/plugin marketplace add git@github.com:dbfr3qs/Spawnly.git` then
    `/plugin install spawnly@spawnly` — show it resolving the commands.
 2. **(10–20s)** Type `/spawnly:` and show the command palette:
    `up`, `status`, `doctor`, `explain`, `demo`.
