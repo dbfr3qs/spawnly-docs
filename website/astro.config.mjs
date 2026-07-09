@@ -43,9 +43,16 @@ export default defineConfig({
           ],
         },
         {
+          label: 'Concepts',
+          items: [
+            { slug: 'concepts/organizations', label: 'Organizations (multi-tenancy)' },
+          ],
+        },
+        {
           label: 'Operating',
           items: [
             { slug: 'operating/config-as-code', label: 'Config-as-code with Terraform' },
+            { slug: 'operating/remote-agents', label: 'Remote agents (consumer-hosted)' },
           ],
         },
       ],
