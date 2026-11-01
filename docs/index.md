@@ -19,6 +19,9 @@ hero:
       link: /authoring/00-anatomy
       icon: open-book
       variant: secondary
+    - text: View on GitHub
+      link: https://github.com/dbfr3qs/Spawnly
+      icon: external
 ---
 
 ## The problem
@@ -37,14 +40,16 @@ long-lived (serve until deleted, including chat).
 ## What it demonstrates
 
 <div class="feature-grid">
-  <div class="feature-card">
+  <a class="feature-card" href="/internals/token-minting">
     <h3>Per-pod workload identity → scoped tokens</h3>
     <p>Every agent gets a unique SPIFFE JWT-SVID from SPIRE at startup — no shared secrets — and a sidecar exchanges it for scoped OAuth tokens, so agent code carries zero identity plumbing.</p>
-  </div>
-  <div class="feature-card">
+    <span class="feature-link">How a token is minted →</span>
+  </a>
+  <a class="feature-card" href="/internals/spawn-consent">
     <h3>Human-in-the-loop spawn consent</h3>
     <p>Sub-agent spawning can be gated on user approval via OpenID CIBA, with stored consent and auto-approval on repeats.</p>
-  </div>
+    <span class="feature-link">CIBA spawn consent →</span>
+  </a>
   <a class="feature-card" href="/authoring/05-defining-policy">
     <h3>Delegated, attenuated authority</h3>
     <p>Parent → child agent chains, with per-template delegation policy that narrows authority as work is handed down.</p>
@@ -74,12 +79,12 @@ Everything runs locally on a Kind cluster — no cloud account required.
     <p class="run-label">Fastest — Claude Code plugin</p>
     <pre>/spawnly:up    <span class="run-comment"># bring the platform up on a local Kind cluster</span>
 /spawnly:demo  <span class="run-comment"># guided tour: spawn, chains, consent, revocation</span></pre>
-    <p class="run-note">Install the plugin from the repository's PLUGIN.md.</p>
+    <p class="run-note">Install it from <a href="https://github.com/dbfr3qs/Spawnly/blob/main/PLUGIN.md">PLUGIN.md</a>.</p>
   </div>
   <div class="run-option">
     <p class="run-label">Manual</p>
     <pre>make bootstrap</pre>
-    <p class="run-note">Same result, straight from the repository Makefile.</p>
+    <p class="run-note">Same result, straight from the <a href="https://github.com/dbfr3qs/Spawnly">repository</a> Makefile.</p>
   </div>
 </div>
 
@@ -103,6 +108,14 @@ Everything runs locally on a Kind cluster — no cloud account required.
       <li><a href="/authoring/04-defining-a-template">Defining a Template</a></li>
       <li><a href="/authoring/05-defining-policy">Defining Policy</a></li>
       <li><a href="/authoring/06-chat">Chatting with a Long-Lived Agent</a></li>
+    </ul>
+  </div>
+  <div class="doc-path">
+    <h3>Under the hood</h3>
+    <p>How the platform works beneath the SDK, traced end to end.</p>
+    <ul>
+      <li><a href="/internals/token-minting">How an agent's token is minted</a></li>
+      <li><a href="/internals/spawn-consent">CIBA spawn consent</a></li>
     </ul>
   </div>
 </div>
